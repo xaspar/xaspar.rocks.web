@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XasPar - Süddeutschlands spontanste Live-Act. Saxophon und Rap für Festivals, Hochzeiten und Partys.">
+    <meta name="theme-color" content="#030303">
+    
+    <title>XasPar — Spontane Live Saxophon &amp; Rap Show</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- LANGUAGE SWITCHER -->
+    <nav class="lang-switcher" aria-label="Language switcher">
+        <button class="lang-btn active" data-lang="de" aria-pressed="true">DE</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </nav>
+
+    <!-- HAMBURGER MENU -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="hamburger-nav" id="hamburgerNav" aria-hidden="true">
+        <ul>
+            <li><a href="#about" data-i18n="footer-about">Über XasPar</a></li>
+            <li><a href="#performance" data-i18n="footer-performance">Performance</a></li>
+            <li><a href="#gallery" data-i18n="gallery-title">Galerie</a></li>
+            <li><a href="#connect" data-i18n="footer-book">Buchen</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger-overlay" id="hamburgerOverlay"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="img/logo.xaspar.png" alt="XasPar - Saxophone &amp; Rap Live Act" class="hero-logo">
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- WHO IS XASPAR SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about-title">Wer ist XasPar?</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead" data-i18n="about-lead">XasPar ist der außergewöhnliche Live-Act für dein Event — ein Saxophonist und Rapper, der plötzlich auftaucht und alle zum tanzen, singen und träumen bringt. Mit vielen Jahren Bühnenerfahrung, mitreißender Energie und echter Leidenschaft fürs Publikum und die Musik. Flash-Mob-Feeling und Gänsehaut garantiert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PERFORMANCE SECTION -->
+    <section id="performance" class="performance">
+        <div class="container">
+            <h2 class="section-title" data-i18n="perf-title">Die Performance</h2>
+            
+            <div class="performance-benefits">
+                <div class="benefit-card">
+                    <h3 data-i18n="perf-card1-title">Spontane Magie</h3>
+                    <p data-i18n="perf-card1-body">XasPar taucht plötzlich auf, bezieht alle ein und nimmt Musikwünsche vom Publikum an. Kein Auftritt ist wie der andere. Sogar Karaoke-Momente mit dem Publikum sind möglich.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3 data-i18n="perf-card2-title">Vielfältiges Repertoire</h3>
+                    <p data-i18n="perf-card2-body">Pop, Rock, Funk, Soul, Hip-Hop, Disco und mehr. Von kraftvoll bis romantisch. Was auch immer dein Publikum braucht, XasPar liefert.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3 data-i18n="perf-card3-title">Jede Note kommt von Herzen</h3>
+                    <p data-i18n="perf-card3-body">Authentisch, energiegeladen und leidenschaftlich. XasPar erzeugt unvergessliche Momente für das Publikum.</p>
+                </div>
+            </div>
+
+            <div class="performance-highlight">
+                <p data-i18n-html="perf-highlight"><strong>Setup:</strong> Dank leichtem, akkubetriebenen Equipment und blitzschnellem Aufbau kann XasPar überall auftreten und die Position auf dem Gelände sofort wechseln, um genau dort aufzutauchen, wo die Energie gebraucht wird.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY PREVIEW SECTION -->
+    <section id="gallery" class="gallery-preview">
+        <div class="container">
+            <h2 class="section-title" data-i18n="gallery-title">Galerie</h2>
+            <div class="gallery-placeholder">
+                <div class="placeholder-content">
+                    <p data-i18n="gallery-placeholder">Performance-Clips &amp; Crowd-Momente — Coming soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING & SOCIAL SECTION -->
+    <section id="connect" class="connect">
+        <div class="container">
+            <h2 class="section-title" data-i18n="connect-title">Let's Rock</h2>
+            
+            <div class="connect-content">
+                <div class="booking-card">
+                    <h3 data-i18n="booking-title">XasPar buchen</h3>
+                    <p data-i18n="booking-intro">Bereit, deinem Event die richtige Energie zu geben?</p>
+                    <p class="booking-instruction">
+                        <span data-i18n-html="booking-instruction"><strong>Schreib uns auf Instagram:</strong></span><br>
+                        <a href="https://instagram.com/xaspar.rocks" target="_blank" class="link">@xaspar.rocks</a>
+                    </p>
+                    <p class="booking-note" data-i18n="booking-note">Erzähl uns von deiner Veranstaltung, Datum, Ort und der erwarteten Publikumsgröße. Konditionen und Verfügbarkeit besprechen wir direkt.</p>
+                </div>
+
+                <div class="social-links">
+                    <h3 data-i18n="social-title">XasPar folgen</h3>
+                    <p data-i18n="social-desc">Neuer Content jede Woche. Behind-the-scenes, Performance-Clips und spontane Straßenmomente.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/xaspar.rocks" target="_blank" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@xaspar.rocks" target="_blank" class="social-icon" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://youtube.com/@xaspar-rocks" target="_blank" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p data-i18n="footer-copyright">&copy; 2026 XasPar. Alle Rechte vorbehalten.</p>
+                <p class="footer-legal-links">
+                    <a href="impressum.html">Impressum</a>
+                    <span class="footer-legal-sep">·</span>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Zurück nach oben">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</body>
+</html>
