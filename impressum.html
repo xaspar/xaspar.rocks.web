@@ -26,7 +26,7 @@
             </p>
 
             <h2>Kontakt</h2>
-            <p>E-Mail: <a href="mailto:contact@xaspar.rocks">contact@xaspar.rocks</a></p>
+            <p>E-Mail: <a class="js-email" data-u="contact" data-d="xaspar.rocks"></a></p>
 
             <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p>
@@ -54,5 +54,12 @@
 
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.js-email').forEach(function(el) {
+            var email = el.getAttribute('data-u') + '\u0040' + el.getAttribute('data-d');
+            if (el.tagName === 'A') { el.href = 'mailto:' + email; }
+            el.textContent = email;
+        });
+    </script>
 </body>
 </html>

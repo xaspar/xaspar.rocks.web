@@ -23,7 +23,7 @@
                 Armin Weißer<br>
                 In den Schliermatten 1a<br>
                 79219 Staufen<br>
-                E-Mail: <a href="mailto:contact@xaspar.rocks">contact@xaspar.rocks</a>
+                E-Mail: <span class="js-email" data-u="contact" data-d="xaspar.rocks"></span>
             </p>
 
             <h2>2. Hosting</h2>
@@ -67,7 +67,7 @@
                 <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
                 <li>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
             </ul>
-            <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:contact@xaspar.rocks">contact@xaspar.rocks</a></p>
+            <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a class="js-email" data-u="contact" data-d="xaspar.rocks"></a></p>
 
             <h2>8. Beschwerderecht</h2>
             <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Zuständige Aufsichtsbehörde für Baden-Württemberg ist:</p>
@@ -85,5 +85,12 @@
 
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.js-email').forEach(function(el) {
+            var email = el.getAttribute('data-u') + '\u0040' + el.getAttribute('data-d');
+            if (el.tagName === 'A') { el.href = 'mailto:' + email; }
+            el.textContent = email;
+        });
+    </script>
 </body>
 </html>

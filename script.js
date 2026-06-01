@@ -28,6 +28,7 @@ const translations = {
         'booking-title': 'XasPar buchen',
         'booking-intro': 'Bereit, deinem Event die richtige Energie zu geben?',
         'booking-instruction': '<strong>Schreib uns auf Instagram:</strong>',
+        'booking-email-label': '<strong>Oder per E-Mail:</strong>',
         'booking-note': 'Erz\u00e4hl uns von deiner Veranstaltung, Datum, Ort und der erwarteten Publikumsgr\u00f6\u00dfe. Konditionen und Verf\u00fcgbarkeit besprechen wir direkt.',
         'social-title': 'XasPar folgen',
         'social-desc': 'Neuer Content jede Woche. Behind-the-scenes, Performance-Clips und spontane Stra\u00dfenmomente.',
@@ -35,7 +36,7 @@ const translations = {
         'footer-links-title': 'Schnelllinks',
         'footer-about': '\u00dcber XasPar',
         'footer-performance': 'Performance',
-        'footer-book': 'Buchen',
+        'footer-book': 'Kontakt',
         'footer-social': 'Social Media',
         'footer-copyright': '\u00a9 2026 XasPar. Alle Rechte vorbehalten.',
     },
@@ -57,6 +58,7 @@ const translations = {
         'booking-title': 'Book XasPar',
         'booking-intro': 'Ready to bring the energy to your event?',
         'booking-instruction': '<strong>Send a message on Instagram:</strong>',
+        'booking-email-label': '<strong>Or via email:</strong>',
         'booking-note': "Tell us about your event, date, location, and expected crowd size. We'll discuss rates and availability directly.",
         'social-title': 'Follow XasPar',
         'social-desc': 'Get all the content! Behind-the-scenes, performance clips, and spontaneous street moments.',
@@ -64,7 +66,7 @@ const translations = {
         'footer-links-title': 'Quick Links',
         'footer-about': 'About',
         'footer-performance': 'Performance',
-        'footer-book': 'Book',
+        'footer-book': 'Contact',
         'footer-social': 'Social',
         'footer-copyright': '\u00a9 2026 XasPar. All rights reserved.',
     }
@@ -158,5 +160,22 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollTopBtn.addEventListener('click', function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    }
+
+    // Email obfuscation
+    document.querySelectorAll('.js-email').forEach(function(el) {
+        var email = el.getAttribute('data-u') + '\u0040' + el.getAttribute('data-d');
+        if (el.tagName === 'A') { el.href = 'mailto:' + email; }
+        el.textContent = email;
+    });
+
+    // Fix hero height on mobile (prevents next section peeking below the fold)
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        function setHeroHeight() {
+            hero.style.minHeight = window.innerHeight + 'px';
+        }
+        setHeroHeight();
+        window.addEventListener('resize', setHeroHeight);
     }
 });
