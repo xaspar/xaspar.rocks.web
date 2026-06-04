@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>XasPar — Druckversion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A5;
+            margin: 11mm 12mm;
+            background: #030303;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 8.5pt;
+            line-height: 1.5;
+            color: #F4F4F4;
+            background: #030303;
+            width: 124mm; /* 148 - 2×12 */
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        /* ── Hero: logo centre + about text right ── */
+        .hero-block {
+            display: grid;
+            grid-template-columns: 48mm 1fr;
+            gap: 5mm;
+            align-items: center;
+            padding-bottom: 5mm;
+            margin-bottom: 5mm;
+        }
+
+        .hero-block img {
+            width: 48mm;
+            height: auto;
+            display: block;
+        }
+
+        .hero-text .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: #ECBF7C;
+            margin-bottom: 2mm;
+        }
+
+        .hero-text p {
+            font-size: 8.5pt;
+            color: #B8B8C3;
+            line-height: 1.55;
+        }
+
+        /* ── Sections ── */
+        .section {
+            margin-bottom: 2.5mm;
+            padding-bottom: 2.5mm;
+            border-bottom: 0.5pt solid #17171F;
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: #ECBF7C;
+            margin-bottom: 2.5mm;
+        }
+
+        /* ── Performance cards ── */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2mm;
+            margin-bottom: 3mm;
+        }
+
+        .card {
+            padding: 2mm 2.5mm;
+            background: #0B0B10;
+            border: 0.5pt solid #17171F;
+            border-top: 2pt solid #ECBF7C;
+            border-radius: 1mm;
+        }
+
+        .card h3 {
+            font-size: 7.5pt;
+            color: #ECBF7C;
+            margin-bottom: 1.5mm;
+        }
+
+        .card p {
+            font-size: 7.5pt;
+            color: #B8B8C3;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            background: #0B0B10;
+            padding: 2mm 3mm;
+            border-left: 2.5pt solid #C46D9A;
+            border-radius: 0 1mm 1mm 0;
+            font-size: 8pt;
+            color: #F4F4F4;
+            line-height: 1.5;
+            margin-top: 5mm;
+            margin-bottom: 3mm;
+        }
+
+        /* ── Contact + Social: side by side ── */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3mm;
+        }
+
+        .contact-intro {
+            font-size: 8pt;
+            color: #B8B8C3;
+            margin-bottom: 2.5mm;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2mm;
+        }
+
+        .contact-item {
+            padding: 2mm 2.5mm;
+            background: #0B0B10;
+            border: 0.5pt solid #17171F;
+            border-top: 1.5pt solid #ECBF7C;
+            border-radius: 1mm;
+        }
+
+        .contact-item h3 {
+            font-size: 7.5pt;
+            color: #ECBF7C;
+            margin-bottom: 1mm;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            font-size: 8pt;
+            color: #F4F4F4;
+            text-decoration: none;
+        }
+
+        .social-desc {
+            font-size: 8pt;
+            color: #B8B8C3;
+            margin-bottom: 2mm;
+        }
+
+        .social-list {
+            list-style: none;
+            font-size: 8pt;
+            color: #B8B8C3;
+            line-height: 1.7;
+        }
+
+        /* ── Footer ── */
+        .print-footer {
+            margin-top: 4mm;
+            padding-top: 2.5mm;
+            border-top: 0.5pt solid #17171F;
+            text-align: left;
+            font-size: 6pt;
+            color: #B8B8C3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo (centre) + About text (right) -->
+    <div class="hero-block">
+        <img src="img/logo.xaspar.png" alt="XasPar">
+        <div class="hero-text">
+            <p class="tagline">Saxophon &amp; Rap Live Act</p>
+            <p>XasPar ist der außergewöhnliche Live-Act für dein Event — ein Saxophonist und Rapper, der plötzlich auftaucht und alle zum tanzen, singen und träumen bringt. Mit vielen Jahren Bühnenerfahrung, mitreißender Energie und echter Leidenschaft fürs Publikum und die Musik. Flash-Mob-Feeling und Gänsehaut garantiert.</p>
+        </div>
+    </div>
+
+    <!-- Performance -->
+    <div class="section">
+        <div class="cards">
+            <div class="card">
+                <h3>Spontane Magie</h3>
+                <p>Taucht plötzlich auf, bezieht alle ein, nimmt Musikwünsche an. Kein Auftritt wie der andere.</p>
+            </div>
+            <div class="card">
+                <h3>Vielfältiges Repertoire</h3>
+                <p>Pop, Rock, Funk, Soul, Hip-Hop, Disco. Von kraftvoll bis romantisch. Aber immer besonders.</p>
+            </div>
+            <div class="card">
+                <h3>Von Herzen</h3>
+                <p>Die energiegeladene und leidenschaftliche Performance schafft unvergessliche Momente.</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <strong>Setup:</strong> Leichtes, akkubetriebenes Equipment — blitzschneller Aufbau, sofortiger Positionswechsel auf dem Gelände.
+        </div>
+    </div>
+
+    <!-- Contact + Social -->
+    <div class="section">
+        <div class="bottom-grid">
+            <div>
+                <h2 class="section-title">Kontakt &amp; Booking</h2>
+                <p class="contact-intro">Bereit, deinem Event die richtige Energie zu geben? Sprich uns gerne an!</p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <h3>Instagram</h3>
+                        <p>@xaspar.rocks</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>E-Mail</h3>
+                        <p>contact@xaspar.rocks</p>
+                    </div>
+                </div>
+                <div class="print-footer">
+                    © 2026 XasPar. Alle Rechte vorbehalten. &nbsp;·&nbsp; xaspar.rocks
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                <div style="margin-right: 4mm;">
+                    <h2 class="section-title">XasPar.rocks folgen</h2>
+                    <img src="img/qr-code.xaspar.png" alt="QR Code — xaspar.rocks" style="width: 48mm; display: block;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
